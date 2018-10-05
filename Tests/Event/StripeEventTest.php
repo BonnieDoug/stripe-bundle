@@ -26,7 +26,7 @@ class StripeEventTest extends TestCase
     }
 
     /**
-     * @expectedException Miracode\StripeBundle\StripeException
+     * @expectedException BonnieDoug\StripeBundle\StripeException
      */
     public function testEventEmptyObject()
     {

@@ -2,8 +2,8 @@
 
 namespace BonnieDoug\StripeBundle\EventListener;
 
-use Miracode\StripeBundle\Event\StripeEvent;
-use Miracode\StripeBundle\Manager\ModelManagerInterface;
+use BonnieDoug\StripeBundle\Event\StripeEvent;
+use BonnieDoug\StripeBundle\Manager\ModelManagerInterface;
 use Stripe\StripeObject;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
@@ -16,7 +16,7 @@ class StripeEventSubscriber implements EventSubscriberInterface
 
     /**
      * StripeEventSubscriber constructor.
-     * @param \Miracode\StripeBundle\Manager\ModelManagerInterface $modelManager
+     * @param \BonnieDoug\StripeBundle\Manager\ModelManagerInterface $modelManager
      */
     public function __construct(ModelManagerInterface $modelManager)
     {

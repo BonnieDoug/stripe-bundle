@@ -2,7 +2,7 @@
 
 namespace BonnieDoug\StripeBundle\Manager;
 
-use Miracode\StripeBundle\Model\StripeModelInterface;
+use BonnieDoug\StripeBundle\Model\StripeModelInterface;
 use Stripe\StripeObject;
 
 interface ModelManagerInterface
@@ -51,7 +51,7 @@ interface ModelManagerInterface
      * @param StripeObject $object
      * @param bool $flush
      *
-     * @return \Miracode\StripeBundle\Model\StripeModelInterface|null
+     * @return \BonnieDoug\StripeBundle\Model\StripeModelInterface|null
      */
     public function remove(StripeObject $object, $flush = false);
 }

@@ -2,7 +2,7 @@
 
 namespace BonnieDoug\StripeBundle\Event;
 
-use Miracode\StripeBundle\StripeException;
+use BonnieDoug\StripeBundle\StripeException;
 use Stripe\StripeObject;
 use Symfony\Component\EventDispatcher\Event;
 

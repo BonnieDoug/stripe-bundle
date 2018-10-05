@@ -16,7 +16,7 @@ class RegisterDoctrineMappingPass implements CompilerPassInterface
     {
         $mappings = array(
             realpath(__DIR__ . '/../../Resources/config/doctrine/model') =>
-                'Miracode\StripeBundle\Model'
+                'BonnieDoug\StripeBundle\Model'
         );
 
         DoctrineOrmMappingsPass::createXmlMappingDriver($mappings)

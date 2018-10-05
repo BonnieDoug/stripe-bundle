@@ -2,9 +2,9 @@
 
 namespace BonnieDoug\StripeBundle\Controller;
 
-use Miracode\StripeBundle\Event\StripeEvent;
-use Miracode\StripeBundle\Stripe\StripeObjectType;
-use Miracode\StripeBundle\StripeException;
+use BonnieDoug\StripeBundle\Event\StripeEvent;
+use BonnieDoug\StripeBundle\Stripe\StripeObjectType;
+use BonnieDoug\StripeBundle\StripeException;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;

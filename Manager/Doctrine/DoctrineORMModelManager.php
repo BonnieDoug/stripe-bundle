@@ -3,11 +3,11 @@
 namespace BonnieDoug\StripeBundle\Manager\Doctrine;
 
 use Doctrine\Common\Persistence\ObjectManager;
-use Miracode\StripeBundle\Manager\ModelManagerInterface;
-use Miracode\StripeBundle\Model\SafeDeleteModelInterface;
-use Miracode\StripeBundle\Model\StripeModelInterface;
-use Miracode\StripeBundle\StripeException;
-use Miracode\StripeBundle\Transformer\TransformerInterface;
+use BonnieDoug\StripeBundle\Manager\ModelManagerInterface;
+use BonnieDoug\StripeBundle\Model\SafeDeleteModelInterface;
+use BonnieDoug\StripeBundle\Model\StripeModelInterface;
+use BonnieDoug\StripeBundle\StripeException;
+use BonnieDoug\StripeBundle\Transformer\TransformerInterface;
 use Stripe\StripeObject;
 
 class DoctrineORMModelManager implements ModelManagerInterface
@@ -166,7 +166,7 @@ class DoctrineORMModelManager implements ModelManagerInterface
      *
      * @param \Stripe\StripeObject $object
      *
-     * @throws \Miracode\StripeBundle\StripeException
+     * @throws \BonnieDoug\StripeBundle\StripeException
      */
     protected function checkSupport(StripeObject $object)
     {
@@ -174,7 +174,7 @@ class DoctrineORMModelManager implements ModelManagerInterface
             throw new StripeException(sprintf(
                 'Stripe object `%1$s` does not support. '
                 . 'Please specify model class for object type `%1$s` '
-                . 'in miracode_stripe.database.model.%1$s',
+                . 'in BonnieDoug_stripe.database.model.%1$s',
                 $this->getObjectType($object)
             ));
         }
