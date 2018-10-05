@@ -25,6 +25,11 @@
         <field name="last4" type="string" />
         <field name="name" column="card_name" type="string" nullable="true" />
         <field name="metadata" column="metadata" type="array" nullable="true" />
+
+        <many-to-one field="customer" target-entity="BonnieDoug\StripeBundle\Model\AbstractCustomerModel" inversed-by="cards">
+            <join-column name="customer" referenced-column-name="id" />
+        </many-to-one>
+
     </mapped-superclass>
 
 </doctrine-mapping>

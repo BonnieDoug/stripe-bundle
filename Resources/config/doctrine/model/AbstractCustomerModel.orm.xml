@@ -4,18 +4,21 @@
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
     <mapped-superclass name="BonnieDoug\StripeBundle\Model\AbstractCustomerModel">
-        <id name="id" column="id" type="string" length="180" />
+        <id name="id" column="id" type="string" length="180"/>
         <field name="accountBalance" column="account_balance" type="integer" nullable="true"/>
-        <field name="coupon" column="coupon" type="string" nullable="true" />
-        <field name="created" column="created" type="integer" />
-        <field name="currency"  column="currency" type="string" nullable="true" />
-        <field name="defaultSource" column="default_source" type="string" nullable="true" />
-        <field name="delinquent" column="delinquent" type="boolean" nullable="true" />
-        <field name="description" column="description" type="string" nullable="true" />
-        <field name="email" column="email" type="string" />
-        <field name="livemode" column="livemode" type="boolean" />
-        <field name="metadata" column="metadata" type="array" nullable="true" />
-        <field name="shipping" column="shipping" type="array" nullable="true" />
+        <field name="coupon" column="coupon" type="string" nullable="true"/>
+        <field name="created" column="created" type="integer"/>
+        <field name="currency" column="currency" type="string" nullable="true"/>
+        <field name="defaultSource" column="default_source" type="string" nullable="true"/>
+        <field name="delinquent" column="delinquent" type="boolean" nullable="true"/>
+        <field name="description" column="description" type="string" nullable="true"/>
+        <field name="email" column="email" type="string"/>
+        <field name="livemode" column="livemode" type="boolean"/>
+        <field name="metadata" column="metadata" type="array" nullable="true"/>
+        <field name="shipping" column="shipping" type="array" nullable="true"/>
+
+        <one-to-many field="cards" target-entity="BonnieDoug\StripeBundle\Model\AbstractCardModel" mapped-by="customer"/>
+
     </mapped-superclass>
 
 </doctrine-mapping>
