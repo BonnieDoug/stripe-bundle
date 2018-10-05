@@ -74,7 +74,7 @@ class BonnieDougStripeExtension extends Extension
             );
             $definition = new Definition();
             $definition->setClass(
-                'Miracode\\StripeBundle\\Manager\\Doctrine\\DoctrineORMModelManager'
+                'BonnieDoug\\StripeBundle\\Manager\\Doctrine\\DoctrineORMModelManager'
             );
             $definition->setArguments([
                 new Reference('bonnie_doug_stripe.object_manager'),
