@@ -202,7 +202,13 @@ class DoctrineORMModelManager implements ModelManagerInterface
     protected function createModel(StripeObject $object)
     {
         $className = $this->modelClass($object);
-
-        return new $className();
+        $class = new $className();
+        if($object->id){
+            $class->setId($object->id);
+        }
+        if($object->customer){
+            $class->setCustomer($this->objectManager->find(Customer::class, $object->customer));
+        }
+        return $class;
     }
 }
