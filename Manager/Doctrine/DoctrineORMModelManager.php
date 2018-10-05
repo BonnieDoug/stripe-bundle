@@ -174,7 +174,7 @@ class DoctrineORMModelManager implements ModelManagerInterface
             throw new StripeException(sprintf(
                 'Stripe object `%1$s` does not support. '
                 . 'Please specify model class for object type `%1$s` '
-                . 'in BonnieDoug_stripe.database.model.%1$s',
+                . 'in bonnie_doug_stripe.database.model.%1$s',
                 $this->getObjectType($object)
             ));
         }

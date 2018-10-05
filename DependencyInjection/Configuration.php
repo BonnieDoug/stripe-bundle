@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('BonnieDoug_stripe');
+        $rootNode = $treeBuilder->root('bonnie_doug_stripe');
 
         $supportedDrivers = array('orm', /** coming soon) */);
 

@@ -1,12 +1,12 @@
 BonnieDougStripeBundle
 ==
 
-This bundle is mainly based on the great work over at Miracode/stripe-bundle. The main repo didn't seem to be activly maintained so I've nicked it so I can bend it to the requirements of SolutionHost. If/When Miracode starts commiting pull requests to his Repo I will merge all my changes into his bundle. If not, they are here :)
+This bundle is mainly based on the great work over at BonnieDoug/stripe-bundle. The main repo didn't seem to be activly maintained so I've nicked it so I can bend it to the requirements of SolutionHost. If/When BonnieDoug starts commiting pull requests to his Repo I will merge all my changes into his bundle. If not, they are here :)
 
-MiracodeStripeBundle
+BonnieDougStripeBundle
 ====================
 
-The MiracodeStripeBundle integrates Stripe PHP SDK to your Symfony project. 
+The BonnieDougStripeBundle integrates Stripe PHP SDK to your Symfony project. 
 Also you can configure bundle to save Stripe data in database. 
 You are free to choose what Stripe objects will be stored. 
 
@@ -21,7 +21,7 @@ Installation
 To install this bundle, run the command below and you will get the latest stable version.
 
 ``` bash
-composer require miracode/stripe-bundle
+composer require bonnieDoug/stripe-bundle
 ```
 
 Register bundle
@@ -32,7 +32,7 @@ public function registerBundles()
 {
   $bundles = array(
     // [...]
-    new Miracode\StripeBundle\MiracodeStripeBundle(),
+    new BonnieDoug\StripeBundle\BonnieDougStripeBundle(),
   );
 }
 ```
@@ -43,14 +43,14 @@ For Symfony >=3.4
 // config/bundles.php
 return [
     // [...]
-    Miracode\StripeBundle\MiracodeStripeBundle::class => ['all' => true],
+    BonnieDoug\StripeBundle\BonnieDougStripeBundle::class => ['all' => true],
 ];
 ```
 And set-up required configuration
 
 ``` yaml
-# app/config/config.yml (or config/packages/miracode_stripe.yaml for Symfony >=3.4)
-miracode_stripe:
+# app/config/config.yml (or config/packages/bonnieDoug_stripe.yaml for Symfony >=3.4)
+bonnieDoug_stripe:
     secret_key: "%stripe_secret_key%"
 ```
 
@@ -67,14 +67,14 @@ $customer = \Stripe\Customer::create([
 ]);
 ```
 
-####Stripe Events
+#### Stripe Events
 
 Add bundle routing configuration to enable Stripe webhooks handler
 
 ``` yaml
 # app/config/routing.yml (or config/routing.yaml for Symfony >=3.4)
-miracode_stripe:
-    resource: '@MiracodeStripeBundle/Resources/config/routing.xml'
+bonnieDoug_stripe:
+    resource: '@BonnieDougStripeBundle/Resources/config/routing.xml'
 ```
 
 This will register route with url `/stripe/webhook`. You should add this webhook endpoint in Stripe Dashboard. Finally you will be able to listen all Stripe events.
@@ -88,7 +88,7 @@ Event Subscriber example:
 
 namespace App\EventListener;
 
-// use Miracode\StripeBundle\Event\StripeEvent;
+// use BonnieDoug\StripeBundle\Event\StripeEvent;
 use BonnieDoug\StripeBundle\Event\StripeEvent;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
@@ -112,20 +112,20 @@ class StripeSubscriber implements EventSubscriberInterface
 }
 ```
 
-####Saving stripe data in database
+#### Saving stripe data in database
 
 Now only Doctrine ORM driver is available.
 
 In bundle there are abstract entity classes with orm mapping for main stripe objects:
 
- -  card: `Miracode\StripeBundle\Model\AbstractCardModel`
- - charge: `Miracode\StripeBundle\Model\AbstractChargeModel`
- - coupon: `Miracode\StripeBundle\Model\AbstractCouponModel`
- - customer: `Miracode\StripeBundle\Model\AbstractCustomerModel`
- - invoice: `Miracode\StripeBundle\Model\AbstractInvoiceModel`
- - plan: `Miracode\StripeBundle\Model\AbstractPlanModel`
- - refund: `Miracode\StripeBundle\Model\AbstractRefundModel`
- - subscription: `Miracode\StripeBundle\Model\AbstractSubscriptionModel`
+ -  card: `BonnieDoug\StripeBundle\Model\AbstractCardModel`
+ - charge: `BonnieDoug\StripeBundle\Model\AbstractChargeModel`
+ - coupon: `BonnieDoug\StripeBundle\Model\AbstractCouponModel`
+ - customer: `BonnieDoug\StripeBundle\Model\AbstractCustomerModel`
+ - invoice: `BonnieDoug\StripeBundle\Model\AbstractInvoiceModel`
+ - plan: `BonnieDoug\StripeBundle\Model\AbstractPlanModel`
+ - refund: `BonnieDoug\StripeBundle\Model\AbstractRefundModel`
+ - subscription: `BonnieDoug\StripeBundle\Model\AbstractSubscriptionModel`
  
 Use this abstract classes to create entities. For example charge entity class:
 
@@ -135,7 +135,7 @@ Use this abstract classes to create entities. For example charge entity class:
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Miracode\StripeBundle\Model\AbstractChargeModel;
+use BonnieDoug\StripeBundle\Model\AbstractChargeModel;
 
 /**
  * @ORM\Entity()
@@ -157,8 +157,8 @@ class Charge extends AbstractChargeModel
 You must also specify entity classes in the bundle configuration
 
 ``` yaml
-# app/config/config.yml (or config/packages/miracode_stripe.yaml for Symfony >=3.4)
-miracode_stripe:
+# app/config/config.yml (or config/packages/bonnieDoug_stripe.yaml for Symfony >=3.4)
+bonnieDoug_stripe:
     #...
     database:
         model:
@@ -199,17 +199,17 @@ $charge = \Stripe\Charge::create([
 
 //Save stripe objects in database
 //You can remove this code and entities will be created automatically by webhooks handler 
-//(see Miracode\StripeBundle\EventListener\StripeEventSubscriber)
-$this->get('miracode_stripe.model_manager')->save($customer);     //Don't flush changes. Return new Customer entity object.
-$this->get('miracode_stripe.model_manager')->save($card);         //Don't flush changes. Return new Card entity object.
-$this->get('miracode_stripe.model_manager')->save($charge, true); //FLUSH changes in DB. Return new Charge entity object.
+//(see BonnieDoug\StripeBundle\EventListener\StripeEventSubscriber)
+$this->get('BonnieDoug_stripe.model_manager')->save($customer);     //Don't flush changes. Return new Customer entity object.
+$this->get('BonnieDoug_stripe.model_manager')->save($card);         //Don't flush changes. Return new Card entity object.
+$this->get('BonnieDoug_stripe.model_manager')->save($charge, true); //FLUSH changes in DB. Return new Charge entity object.
 ```
 
 If you enabled webhooks handling (described above), you can omit using model manager service to save objects data. 
 There is event subscriber that will save/update/remove configured entities by stripe events automatically.
 
-**Note** some data can be deleted by webhooks handler. If you want to use safe delete technique, implement interface `Miracode\StripeBundle\Model\SafeDeleteModelInterface` in your entity classes. 
-Also you can use trait `Miracode\StripeBundle\Model\Traits\SafeDeleteTrait` for easy interface implementation. 
+**Note** some data can be deleted by webhooks handler. If you want to use safe delete technique, implement interface `BonnieDoug\StripeBundle\Model\SafeDeleteModelInterface` in your entity classes. 
+Also you can use trait `BonnieDoug\StripeBundle\Model\Traits\SafeDeleteTrait` for easy interface implementation. 
 
 
 License

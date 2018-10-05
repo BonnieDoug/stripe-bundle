@@ -14,7 +14,7 @@ class BonnieDougStripeBundle extends Bundle
     public function boot()
     {
         \Stripe\Stripe::setApiKey(
-            $this->container->getParameter('BonnieDoug_stripe.secret_key')
+            $this->container->getParameter('bonnie_doug_stripe.secret_key')
         );
     }
 

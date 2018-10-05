@@ -31,20 +31,20 @@ class BonnieDougStripeExtension extends Extension
         $loader->load('services.xml');
 
         $container->setParameter(
-            'BonnieDoug_stripe.secret_key',
+            'bonnie_doug_stripe.secret_key',
             $config['secret_key']
         );
 
         if (!empty($config['database']) && !empty($config['database']['model'])) {
             if (!empty($config['database']['model_transformer'])) {
                 $container->setAlias(
-                    'BonnieDoug_stripe.model_transformer',
+                    'bonnie_doug_stripe.model_transformer',
                     $config['database']['model_transformer']
                 );
             } else {
                 $container->setAlias(
-                    'BonnieDoug_stripe.model_transformer',
-                    'BonnieDoug_stripe.model_transformer.annotation'
+                    'bonnie_doug_stripe.model_transformer',
+                    'bonnie_doug_stripe.model_transformer.annotation'
                 );
             }
             if ($this->configureDatabase($config['database'], $container)) {
@@ -65,11 +65,11 @@ class BonnieDougStripeExtension extends Extension
                 $config['object_manager'] = 'doctrine.orm.entity_manager';
             }
             $container->setAlias(
-                'BonnieDoug_stripe.object_manager',
+                'bonnie_doug_stripe.object_manager',
                 $config['object_manager']
             );
             $container->setParameter(
-                'BonnieDoug_stripe.model_classes',
+                'bonnie_doug_stripe.model_classes',
                 $config['model']
             );
             $definition = new Definition();
@@ -77,13 +77,13 @@ class BonnieDougStripeExtension extends Extension
                 'BonnieDoug\\StripeBundle\\Manager\\Doctrine\\DoctrineORMModelManager'
             );
             $definition->setArguments([
-                new Reference('BonnieDoug_stripe.object_manager'),
-                new Reference('BonnieDoug_stripe.model_transformer'),
-                '%BonnieDoug_stripe.model_classes%'
+                new Reference('bonnie_doug_stripe.object_manager'),
+                new Reference('bonnie_doug_stripe.model_transformer'),
+                '%bonnie_doug_stripe.model_classes%'
             ]);
             $definition->setPublic(true);
             $container->setDefinition(
-                'BonnieDoug_stripe.model_manager',
+                'bonnie_doug_stripe.model_manager',
                 $definition
             );
 
