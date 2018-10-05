@@ -4,7 +4,7 @@
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
     <mapped-superclass name="BonnieDoug\StripeBundle\Model\AbstractSubscriptionModel">
-        <id name="id" column="id" type="string" />
+        <id name="id" column="id" type="string" length="180" />
         <field name="applicationFeePercent" column="application_fee_percent" type="decimal" percision="6" scale="2" nullable="true" />
         <field name="billing" column="billing" type="string" nullable="true" />
         <field name="cancelAtPeriodEnd" column="cancel_at_period_end" type="boolean" nullable="true" />

@@ -4,7 +4,7 @@
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
     <mapped-superclass name="BonnieDoug\StripeBundle\Model\AbstractCardModel">
-        <id name="id" column="id" type="string" />
+        <id name="id" column="id" type="string" length="180" />
         <field name="addressCity" column="address_city" type="string" nullable="true" />
         <field name="addressCountry" column="address_country" type="string" nullable="true" />
         <field name="addressLine1" column="address_line1" type="string" nullable="true" />
