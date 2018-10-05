@@ -19,7 +19,6 @@ abstract class AbstractChargeModel extends StripeModel
      * @var int
      * @Groups({"post"})
      * @StripeObjectParam
-     * @Assert\NotBlank(groups={"post"})
      */
     protected $amount = 0;
 
