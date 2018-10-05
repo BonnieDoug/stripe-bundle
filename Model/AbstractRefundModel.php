@@ -3,6 +3,7 @@
 namespace BonnieDoug\StripeBundle\Model;
 
 use BonnieDoug\StripeBundle\Annotation\StripeObjectParam;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 abstract class AbstractRefundModel extends StripeModel
 {
