@@ -4,6 +4,7 @@ namespace BonnieDoug\StripeBundle\Model;
 
 use BonnieDoug\StripeBundle\Annotation\StripeObjectParam;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Doctrine\ORM\Mapping as ORM;
 
 abstract class AbstractCustomerModel extends StripeModel
 {
@@ -151,10 +152,10 @@ abstract class AbstractCustomerModel extends StripeModel
     protected $deleted = false;
 
     /**
-     * @StripeObjectParam
-     * @var array|null
+     * @var mixed
+     * @ORM\OneToMany(targetEntity="AbstractCardModel", mappedBy="customer")
      */
-    protected $cards = null;
+    protected $cards;
 
     /**
      * @return int
