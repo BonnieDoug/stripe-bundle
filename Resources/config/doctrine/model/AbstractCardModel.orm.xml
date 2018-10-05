@@ -3,7 +3,7 @@
                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
-    <entity name="BonnieDoug\StripeBundle\Model\AbstractCardModel">
+    <mapped-superclass name="BonnieDoug\StripeBundle\Model\AbstractCardModel">
         <id name="id" column="id" type="string" length="180" />
         <field name="addressCity" column="address_city" type="string" nullable="true" />
         <field name="addressCountry" column="address_country" type="string" nullable="true" />
@@ -25,10 +25,10 @@
         <field name="name" column="card_name" type="string" nullable="true" />
         <field name="metadata" column="metadata" type="array" nullable="true" />
 
-        <many-to-one field="customer" target-entity="BonnieDoug\StripeBundle\Model\AbstractCustomerModel" inversed-by="cards">
-            <join-column name="customer" referenced-column-name="id" />
-        </many-to-one>
+        <!--<many-to-one field="customer" target-entity="BonnieDoug\StripeBundle\Model\AbstractCustomerModel" inversed-by="cards">-->
+            <!--<join-column name="customer" referenced-column-name="id" />-->
+        <!--</many-to-one>-->
 
-    </entity>
+    </mapped-superclass>
 
 </doctrine-mapping>
