@@ -2,6 +2,7 @@
 
 namespace BonnieDoug\StripeBundle\Manager\Doctrine;
 
+use BonnieDoug\StripeBundle\Model\AbstractCustomerModel;
 use Doctrine\Common\Persistence\ObjectManager;
 use BonnieDoug\StripeBundle\Manager\ModelManagerInterface;
 use BonnieDoug\StripeBundle\Model\SafeDeleteModelInterface;
@@ -207,7 +208,7 @@ class DoctrineORMModelManager implements ModelManagerInterface
             $class->setId($object->id);
         }
         if($object->customer){
-            $class->setCustomer($this->objectManager->find(Customer::class, $object->customer));
+            $class->setCustomer($this->objectManager->find(AbstractCustomerModel::class, $object->customer));
         }
         return $class;
     }
