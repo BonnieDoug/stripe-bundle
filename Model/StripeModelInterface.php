@@ -11,5 +11,5 @@ interface StripeModelInterface
      *
      * return string
      */
-    public function geId();
+    public function getId();
 }
