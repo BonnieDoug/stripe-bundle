@@ -24,7 +24,7 @@
         <field name="last4" type="string" />
         <field name="name" column="crad_name" type="string" nullable="true" />
         <field name="metadata" column="metadata" type="array" nullable="true" />
-        <field name="stripeId" column="stripe_id" type="string" />
+        <field name="stripeId" column="stripe_id" type="string" length="180" />
 
         <unique-constraints>
             <unique-constraint columns="stripe_id" name="stripe_id_idx" length="180" />

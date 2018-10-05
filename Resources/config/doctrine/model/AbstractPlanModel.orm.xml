@@ -13,7 +13,7 @@
         <field name="metadata" column="metadata" type="array" nullable="true" />
         <field name="name" column="name" type="string" />
         <field name="statementDescriptor" column="statement_descriptor" type="string" nullable="true" />
-        <field name="stripeId" column="stripe_id" type="string" />
+        <field name="stripeId" column="stripe_id" type="string" length="180" />
         <field name="trialPeriodDays" column="trial_period_days" type="integer" nullable="true" />
 
         <unique-constraints>

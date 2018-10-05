@@ -15,7 +15,7 @@
         <field name="reason" column="reason" type="string" nullable="true" />
         <field name="receiptNumber" column="receipt_number" type="string" nullable="true" />
         <field name="status" column="status" type="string" nullable="true" />
-        <field name="stripeId" column="stripe_id" type="string" />
+        <field name="stripeId" column="stripe_id" type="string" length="180" />
 
         <unique-constraints>
             <unique-constraint columns="stripe_id" name="stripe_id_idx" length="180" />

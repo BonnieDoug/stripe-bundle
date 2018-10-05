@@ -30,7 +30,7 @@
         <field name="receiptNumber" column="recipient_number" type="string" nullable="true" />
         <field name="startingBalance" column="starting_balance" type="integer" nullable="true" />
         <field name="statementDescriptor" column="statement_descriptor" type="string" nullable="true" />
-        <field name="stripeId" column="stripe_id" type="string" />
+        <field name="stripeId" column="stripe_id" type="string" length="180" />
         <field name="subscription" column="subscription" type="string" nullable="true" />
         <field name="subscriptionProrationDate" column="subscription_proration_date" type="integer" nullable="true" />
         <field name="subtotal" column="subtotal" type="integer" nullable="true" />
