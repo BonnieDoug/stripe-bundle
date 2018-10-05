@@ -109,7 +109,7 @@ abstract class AbstractCardModel extends StripeModel
     /**
      * The customer that this card belongs to. This attribute will not be in the card object if the card belongs to an account or recipient instead.
      * @StripeObjectParam
-     * @ORM\ManyToOne(targetEntity="AbstractCustomerModel", inversedBy="cards")
+     * @ORM\ManyToOne(targetEntity="\BonnieDoug\StripeBundle\Model\AbstractCustomerModel", inversedBy="cards")
      * @ORM\JoinColumn(name="customer")
      *
      */

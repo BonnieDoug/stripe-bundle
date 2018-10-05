@@ -153,7 +153,7 @@ abstract class AbstractCustomerModel extends StripeModel
 
     /**
      * @var mixed
-     * @ORM\OneToMany(targetEntity="AbstractCardModel", mappedBy="customer")
+     * @ORM\OneToMany(targetEntity="\BonnieDoug\StripeBundle\Model\AbstractCardModel", mappedBy="customer")
      */
     protected $cards;
 
