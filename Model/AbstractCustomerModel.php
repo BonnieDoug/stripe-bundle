@@ -151,6 +151,12 @@ abstract class AbstractCustomerModel extends StripeModel
     protected $deleted = false;
 
     /**
+     * @StripeObjectParam
+     * @var array|null
+     */
+    protected $cards = null;
+
+    /**
      * @return int
      */
     public function getAccountBalance()
@@ -511,6 +517,24 @@ abstract class AbstractCustomerModel extends StripeModel
     public function setDeleted($deleted)
     {
         $this->deleted = $deleted;
+        return $this;
+    }
+
+    /**
+     * @return array|null
+     */
+    public function getCards()
+    {
+        return $this->cards;
+    }
+
+    /**
+     * @param array|null $cards
+     * @return AbstractCustomerModel
+     */
+    public function setCards($cards)
+    {
+        $this->cards = $cards;
         return $this;
     }
 
