@@ -4,6 +4,7 @@
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
     <mapped-superclass name="BonnieDoug\StripeBundle\Model\AbstractInvoiceModel">
+        <id name="id" column="id" type="string" />
         <field name="amountDue" column="amount_due" type="integer" nullable="true" />
         <field name="applicationFee" column="application_fee" type="integer" nullable="true" />
         <field name="attemptCount" column="attempt_count" type="integer" nullable="true" />
@@ -30,7 +31,6 @@
         <field name="receiptNumber" column="recipient_number" type="string" nullable="true" />
         <field name="startingBalance" column="starting_balance" type="integer" nullable="true" />
         <field name="statementDescriptor" column="statement_descriptor" type="string" nullable="true" />
-        <field name="stripeId" column="stripe_id" type="string" length="180" />
         <field name="subscription" column="subscription" type="string" nullable="true" />
         <field name="subscriptionProrationDate" column="subscription_proration_date" type="integer" nullable="true" />
         <field name="subtotal" column="subtotal" type="integer" nullable="true" />
@@ -38,10 +38,6 @@
         <field name="taxPercent" column="tax_percent" type="decimal" precision="6" scale="2" nullable="true" />
         <field name="total" column="total" type="integer" nullable="true" />
         <field name="webhooksDeliveredAt" column="webhooks_delivered_at" type="integer" nullable="true" />
-
-        <unique-constraints>
-            <unique-constraint columns="stripe_id" name="stripe_id_idx" length="180" />
-        </unique-constraints>
     </mapped-superclass>
 
 </doctrine-mapping>

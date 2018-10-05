@@ -4,6 +4,7 @@
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
     <mapped-superclass name="BonnieDoug\StripeBundle\Model\AbstractCouponModel">
+        <id name="id" column="id" type="string" />
         <field name="amountOff"  column="amount_off" type="integer" nullable="true" />
         <field name="created" column="created" type="integer" />
         <field name="currency" column="currency" type="string" nullable="true" />
@@ -14,13 +15,8 @@
         <field name="maxRedemptions" column="max_redemptions" type="integer" nullable="true" />
         <field name="percentOff" column="percent_off" type="integer" nullable="true" />
         <field name="redeemBy" column="redeem_by" type="integer" nullable="true" />
-        <field name="stripeId" column="stripe_id" type="string" length="180" />
         <field name="timesRedeemed" column="times_redeemed" type="integer" nullable="true" />
         <field name="valid" column="valid" type="boolean" nullable="true" />
-
-        <unique-constraints>
-            <unique-constraint columns="stripe_id" name="stripe_id_idx" length="180" />
-        </unique-constraints>
     </mapped-superclass>
 
 </doctrine-mapping>

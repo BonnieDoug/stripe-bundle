@@ -68,7 +68,7 @@ class DoctrineORMModelManager implements ModelManagerInterface
         $modelClass = $this->modelClass($object);
 
         return $this->objectManager->getRepository($modelClass)->findOneBy([
-            'stripeId' => $object->id
+            'id' => $object->id
         ]);
     }
 
