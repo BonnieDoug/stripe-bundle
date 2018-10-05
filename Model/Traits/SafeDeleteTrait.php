@@ -1,6 +1,6 @@
 <?php
 
-namespace Miracode\StripeBundle\Model\Traits;
+namespace BonnieDoug\StripeBundle\Model\Traits;
 
 use Doctrine\ORM\Mapping as ORM;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Miracode\StripeBundle\DependencyInjection\Compiler;
+namespace BonnieDoug\StripeBundle\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

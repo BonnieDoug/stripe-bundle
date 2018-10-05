@@ -1,6 +1,6 @@
 <?php
 
-namespace Miracode\StripeBundle\Stripe;
+namespace BonnieDoug\StripeBundle\Stripe;
 
 class StripeObjectType
 {

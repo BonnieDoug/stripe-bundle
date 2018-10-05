@@ -1,11 +1,11 @@
 <?php
 
-namespace Miracode\StripeBundle\Transformer;
+namespace BonnieDoug\StripeBundle\Transformer;
 
 use Doctrine\Common\Annotations\AnnotationReader;
-use Miracode\StripeBundle\Annotation\StripeObjectParam;
-use Miracode\StripeBundle\Model\StripeModelInterface;
-use Miracode\StripeBundle\Stripe\StripeObjectType;
+use BonnieDoug\StripeBundle\Annotation\StripeObjectParam;
+use BonnieDoug\StripeBundle\Model\StripeModelInterface;
+use BonnieDoug\StripeBundle\Stripe\StripeObjectType;
 use Stripe\StripeObject;
 
 class AnnotationTransformer implements TransformerInterface
@@ -24,7 +24,7 @@ class AnnotationTransformer implements TransformerInterface
             /** @var StripeObjectParam $stripeObjectParam */
             $stripeObjectParam = $annotationReader->getPropertyAnnotation(
                 $prop,
-                "Miracode\StripeBundle\Annotation\StripeObjectParam"
+                "BonnieDoug\StripeBundle\Annotation\StripeObjectParam"
             );
             if (!$stripeObjectParam) {
                 continue;

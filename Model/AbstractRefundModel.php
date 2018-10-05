@@ -1,8 +1,8 @@
 <?php
 
-namespace Miracode\StripeBundle\Model;
+namespace BonnieDoug\StripeBundle\Model;
 
-use Miracode\StripeBundle\Annotation\StripeObjectParam;
+use BonnieDoug\StripeBundle\Annotation\StripeObjectParam;
 
 abstract class AbstractRefundModel extends StripeModel
 {

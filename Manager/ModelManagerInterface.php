@@ -1,6 +1,6 @@
 <?php
 
-namespace Miracode\StripeBundle\Manager;
+namespace BonnieDoug\StripeBundle\Manager;
 
 use Miracode\StripeBundle\Model\StripeModelInterface;
 use Stripe\StripeObject;

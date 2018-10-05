@@ -1,6 +1,6 @@
 <?php
 
-namespace Miracode\StripeBundle\Annotation;
+namespace BonnieDoug\StripeBundle\Annotation;
 
 /**
  * @Annotation

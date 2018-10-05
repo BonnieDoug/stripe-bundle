@@ -6,7 +6,7 @@ use Miracode\StripeBundle\DependencyInjection\Compiler\RegisterDoctrineMappingPa
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
-class MiracodeStripeBundle extends Bundle
+class BonnieDougStripeBundle extends Bundle
 {
     /**
      * {@inheritdoc}
@@ -14,7 +14,7 @@ class MiracodeStripeBundle extends Bundle
     public function boot()
     {
         \Stripe\Stripe::setApiKey(
-            $this->container->getParameter('miracode_stripe.secret_key')
+            $this->container->getParameter('BonnieDoug_stripe.secret_key')
         );
     }
 

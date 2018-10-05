@@ -1,6 +1,6 @@
 <?php
 
-namespace Miracode\StripeBundle\Event;
+namespace BonnieDoug\StripeBundle\Event;
 
 use Miracode\StripeBundle\StripeException;
 use Stripe\StripeObject;

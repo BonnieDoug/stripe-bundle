@@ -1,9 +1,9 @@
 <?php
 
-namespace Miracode\StripeBundle\Tests\Event;
+namespace BonnieDoug\StripeBundle\Tests\Event;
 
-use Miracode\StripeBundle\Event\StripeEvent;
-use Miracode\StripeBundle\Stripe\StripeObjectType;
+use BonnieDoug\StripeBundle\Event\StripeEvent;
+use BonnieDoug\StripeBundle\Stripe\StripeObjectType;
 use PHPUnit\Framework\TestCase;
 use Stripe\StripeObject;
 

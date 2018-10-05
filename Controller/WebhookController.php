@@ -1,6 +1,6 @@
 <?php
 
-namespace Miracode\StripeBundle\Controller;
+namespace BonnieDoug\StripeBundle\Controller;
 
 use Miracode\StripeBundle\Event\StripeEvent;
 use Miracode\StripeBundle\Stripe\StripeObjectType;

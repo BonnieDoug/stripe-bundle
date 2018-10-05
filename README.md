@@ -1,3 +1,8 @@
+BonnieDougStripeBundle
+==
+
+This bundle is mainly based on the great work over at Miracode/stripe-bundle. The main repo didn't seem to be activly maintained so I've nicked it so I can bend it to the requirements of SolutionHost. If/When Miracode starts commiting pull requests to his Repo I will merge all my changes into his bundle. If not, they are here :)
+
 MiracodeStripeBundle
 ====================
 
@@ -83,7 +88,9 @@ Event Subscriber example:
 
 namespace App\EventListener;
 
-use Miracode\StripeBundle\Event\StripeEvent;
+// use Miracode\StripeBundle\Event\StripeEvent;
+use BonnieDoug\StripeBundle\Event\StripeEvent;
+
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 class StripeSubscriber implements EventSubscriberInterface
@@ -111,7 +118,7 @@ Now only Doctrine ORM driver is available.
 
 In bundle there are abstract entity classes with orm mapping for main stripe objects:
 
- - card: `Miracode\StripeBundle\Model\AbstractCardModel`
+ -  card: `Miracode\StripeBundle\Model\AbstractCardModel`
  - charge: `Miracode\StripeBundle\Model\AbstractChargeModel`
  - coupon: `Miracode\StripeBundle\Model\AbstractCouponModel`
  - customer: `Miracode\StripeBundle\Model\AbstractCustomerModel`

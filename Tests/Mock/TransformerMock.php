@@ -1,9 +1,9 @@
 <?php
 
-namespace Miracode\StripeBundle\Tests\Mock;
+namespace BonnieDoug\StripeBundle\Tests\Mock;
 
-use Miracode\StripeBundle\Model\StripeModelInterface;
-use Miracode\StripeBundle\Transformer\TransformerInterface;
+use BonnieDoug\StripeBundle\Model\StripeModelInterface;
+use BonnieDoug\StripeBundle\Transformer\TransformerInterface;
 use Stripe\StripeObject;
 
 class TransformerMock implements TransformerInterface

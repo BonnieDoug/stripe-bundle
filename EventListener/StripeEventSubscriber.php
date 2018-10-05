@@ -1,6 +1,6 @@
 <?php
 
-namespace Miracode\StripeBundle\EventListener;
+namespace BonnieDoug\StripeBundle\EventListener;
 
 use Miracode\StripeBundle\Event\StripeEvent;
 use Miracode\StripeBundle\Manager\ModelManagerInterface;

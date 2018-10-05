@@ -1,8 +1,8 @@
 <?php
 
-namespace Miracode\StripeBundle\Tests\TestModel;
+namespace BonnieDoug\StripeBundle\Tests\TestModel;
 
-use Miracode\StripeBundle\Model\AbstractCustomerModel;
+use BonnieDoug\StripeBundle\Model\AbstractCustomerModel;
 
 class TestCustomer extends AbstractCustomerModel
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Miracode\StripeBundle\Model;
+namespace BonnieDoug\StripeBundle\Model;
 
 interface SafeDeleteModelInterface
 {

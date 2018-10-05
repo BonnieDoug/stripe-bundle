@@ -1,6 +1,6 @@
 <?php
 
-namespace Miracode\StripeBundle\Manager\Doctrine;
+namespace BonnieDoug\StripeBundle\Manager\Doctrine;
 
 use Doctrine\Common\Persistence\ObjectManager;
 use Miracode\StripeBundle\Manager\ModelManagerInterface;

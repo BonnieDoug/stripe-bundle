@@ -1,6 +1,6 @@
 <?php
 
-namespace Miracode\StripeBundle;
+namespace BonnieDoug\StripeBundle;
 
 class StripeException extends \Exception
 {

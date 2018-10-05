@@ -1,6 +1,6 @@
 <?php
 
-namespace Miracode\StripeBundle\DependencyInjection;
+namespace BonnieDoug\StripeBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('miracode_stripe');
+        $rootNode = $treeBuilder->root('BonnieDoug_stripe');
 
         $supportedDrivers = array('orm', /** coming soon) */);
 

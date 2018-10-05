@@ -1,8 +1,8 @@
 <?php
 
-namespace Miracode\StripeBundle\Transformer;
+namespace BonnieDoug\StripeBundle\Transformer;
 
-use Miracode\StripeBundle\Model\StripeModelInterface;
+use BonnieDoug\StripeBundle\Model\StripeModelInterface;
 use Stripe\StripeObject;
 
 interface TransformerInterface

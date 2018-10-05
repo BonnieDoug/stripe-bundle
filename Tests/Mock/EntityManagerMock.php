@@ -1,6 +1,6 @@
 <?php
 
-namespace Miracode\StripeBundle\Tests\Mock;
+namespace BonnieDoug\StripeBundle\Tests\Mock;
 
 use Doctrine\Common\Persistence\ObjectManager;
 
