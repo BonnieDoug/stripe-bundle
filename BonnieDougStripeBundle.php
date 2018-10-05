@@ -1,8 +1,8 @@
 <?php
 
-namespace Miracode\StripeBundle;
+namespace BonnieDoug\StripeBundle;
 
-use Miracode\StripeBundle\DependencyInjection\Compiler\RegisterDoctrineMappingPass;
+use BonnieDoug\StripeBundle\DependencyInjection\Compiler\RegisterDoctrineMappingPass;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
