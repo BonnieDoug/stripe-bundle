@@ -1,7 +1,7 @@
 BonnieDougStripeBundle
 ==
 
-This bundle is mainly based on the great work over at BonnieDoug/stripe-bundle. The main repo didn't seem to be activly maintained so I've nicked it so I can bend it to the requirements of SolutionHost. If/When BonnieDoug starts commiting pull requests to his Repo I will merge all my changes into his bundle. If not, they are here :)
+This bundle is mainly based on the great work over at mirovskyi/stripe-bundle. The main repo didn't seem to be activly maintained so I've nicked it so I can bend it to the requirements of SolutionHost. If/When Mirovskyi starts commiting pull requests to his Repo I will merge all my changes into his bundle. If not, they are here :)
 
 BonnieDougStripeBundle
 ====================
